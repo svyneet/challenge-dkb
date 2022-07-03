@@ -11,9 +11,7 @@ We check if a hash already exists for a given URL, if yes then we just return th
 
 The length of the short URL (hash) function and total number of retries that we will support can be setup as a property.
 
-The advantage is that this approach is simple to implement but the drawback is that if we have a hash length of 5, then with lower case alphabets we will not be able to support the  26ˆ5 hashes fully as there will be more and more clashes as the DB table gets filled.
-
-At that time we can generate another hash based on a different length. We can do that if we have a counter for hash collisions and automatically update the hash length if the collision is more than a certain percentage of the total supported hash.
+The advantage is that this approach is simple to implement but the drawback is that if we have a hash length of 5, then with lower case alphabets we will not be able to support the  26ˆ5 hashes fully as there will be more and more clashes as the DB table gets filled. At that time we can generate another hash based on a different length. We can do that if we have a counter for hash collisions and automatically update the hash length if the collision is more than a certain percentage of the total supported hash.
 
 If we want to fully support all the hashes for a particular length of string and avoid collision, then we can first generate the hashes and then store it. After that we can pick the hash one by one and delete the ones that has been picked. However, we will need a lot of space to store the hashes.
 
