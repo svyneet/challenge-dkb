@@ -19,7 +19,7 @@ If we want to fully support all the hashes for a particular length of string and
 
 The task is divided into standard layers like: Entity, Service, Repository and Controller and there are a few supporting classes.
 
-They are all within the same package following Domain Driven Development approach. It is also recommended bz Spring: https://docs.spring.io/spring-boot/docs/2.0.0.RELEASE/reference/html/using-boot-structuring-your-code.html
+They are all within the same package following Domain Driven Development approach. It is also recommended by Spring: https://docs.spring.io/spring-boot/docs/2.0.0.RELEASE/reference/html/using-boot-structuring-your-code.html
 
 In memory database DB2 has been used just for simple setup. 
 
